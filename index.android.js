@@ -9,7 +9,12 @@ const App = StackNavigator({
   Home: {
     screen: SrbFront,
     navigationOptions: {
-      headerRight: <Image source={require('./app/images/common/navi_logo.jpg')} />,
+      headerLeft: <Image
+        source={require('./app/images/common/navi_logo.jpg')}
+        style={{marginLeft: 20}}/>,
+      headerRight: <Image
+        source={require('./app/images/common/navi_person.png')}
+        style={{marginRight: 25}}/>,
     }
   },
   Login: {

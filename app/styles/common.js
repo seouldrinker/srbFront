@@ -17,4 +17,8 @@ export default StyleSheet.create({
     color: '#333333',
     marginBottom: 5,
   },
+  naviIcon: {
+    width: 20,
+    height: 20,
+  }
 })

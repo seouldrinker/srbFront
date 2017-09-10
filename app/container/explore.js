@@ -5,9 +5,19 @@ import {
   Image
 } from 'react-native'
 
-import styles from '../styles'
+import styles from '../styles/common'
 
 export default class Explore extends Component {
+  static navigationOptions = {
+    tabBarLabel: '탐색',
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require('../images/common/navi_explore.png')}
+        style={[styles.naviIcon, {tintColor: tintColor}]}
+      />
+    ),
+  }
+
   render() {
     return (
       <View style={styles.container}>

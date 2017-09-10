@@ -5,9 +5,19 @@ import {
   Image
 } from 'react-native'
 
-import styles from '../styles'
+import styles from '../styles/common'
 
 export default class Rank extends Component {
+  static navigationOptions = {
+    tabBarLabel: '랭킹',
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require('../images/common/navi_feed.png')}
+        style={[styles.naviIcon, {tintColor: tintColor}]}
+      />
+    ),
+  }
+
   render() {
     return (
       <View style={styles.container}>

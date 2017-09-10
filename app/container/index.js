@@ -1,3 +1,5 @@
+import { Image } from 'react-native'
+
 import { TabNavigator } from 'react-navigation'
 
 import Feed from './feed'
@@ -6,16 +8,36 @@ import Walk from './walk'
 import Rank from './rank'
 
 export default TabNavigator({
-  '피드': {
+  Feed: {
     screen: Feed
   },
-  '탐색': {
+  Explore: {
     screen: Explore
   },
-  '걷기': {
+  Walk: {
     screen: Walk
   },
-  '랭킹': {
+  Rank: {
     screen: Rank
+  },
+}, {
+  tabBarPosition: 'top',
+  animationEnabled: true,
+  tabBarOptions: {
+    activeTintColor: '#00b154',
+    inactiveTintColor: '#4a4a4a',
+    showIcon: true,
+    tabStyle: {
+      flexDirection: 'row',
+    },
+    labelStyle: {
+      fontSize: 18,
+    },
+    indicatorStyle: {
+      backgroundColor: '#00b154',
+    },
+    style: {
+      backgroundColor: '#fff',
+    }
   },
 })
